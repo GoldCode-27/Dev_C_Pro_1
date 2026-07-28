@@ -3,7 +3,7 @@ import coverImage from '../assets/Cover Image.png'
 import logoImage from '../assets/adidas - png.png'
 function Header() {
   return (
-   
+     
         <>
      <div className="bg-black h-6 w-1440 text-yellow-500 text-center font-bold  "> NEW COLLABS FOR THIS WEEK. CHECK OUT THE ADICLUB FOR MORE 
      </div>
