@@ -1,33 +1,31 @@
 import React from 'react';
-import heroPersonImg from '../assets/heroPersonImg.png'
-// Import your central image from your assets folder:
-// import heroPersonImg from '../assets/hero-person.png';
+import heroPersonImg from '../assets/heroPersonImg.png';
 
 export default function Footer() {
   return (
     <section className="relative w-full bg-gradient-to-r from-amber-600 via-orange-500 to-amber-600 text-white overflow-hidden py-12 px-6 md:px-16 font-sans">
       
-      {/* 1. TOP HEADER */}
-      <div className="text-center mb-8 relative z-10">
-        <h1 className="text-4xl md:text-6xl  font-black uppercase tracking-wider drop-shadow-md">
-          History and Grace
-        </h1>
-      </div>
-
-      {/* 2. MAIN CONTENT AREA (Grid with Background Person Image) */}
-      <div className="relative max-w-6xl mx-auto min-h-[420px] flex items-center justify-center">
+      {/* MAIN CONTENT AREA */}
+      <div className="relative max-w-6xl mx-auto min-h-[480px] flex items-center justify-center pt-8">
         
-        {/* Centered Person Image */}
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none mt-0">
+        {/* 1. TEXT IN THE BACKGROUND (Behind the person) */}
+        <div className="absolute top-0 inset-x-0 text-center z-0 pointer-events-none">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-black uppercase tracking-wider text-white opacity-90 drop-shadow-lg whitespace-nowrap">
+            History and Grace
+          </h1>
+        </div>
+
+        {/* 2. CENTERED PERSON IMAGE (In front of the title) */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <img 
             src={heroPersonImg} 
             alt="History and Grace Athlete" 
-            className="h-full max-h-[420px] object-contain object-bottom opacity-90 drop-shadow-2xl"
+            className="h-full max-h-[460px] object-contain object-bottom drop-shadow-2xl"
           />
         </div>
 
-        {/* 2-Column Text Grid Overlaid on top of image */}
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 text-sm md:text-base leading-relaxed text-gray-100 font-light drop-shadow">
+        {/* 3. TEXT PARAGRAPHS (In front of everything) */}
+        <div className="relative z-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 text-sm md:text-base leading-relaxed text-gray-100 font-light drop-shadow-md w-full">
           
           {/* Left Column */}
           <div className="space-y-6 text-left max-w-md">
@@ -52,8 +50,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 3. BOTTOM CENTERED STATEMENT */}
-      <div className="relative z-10 text-center mt-8">
+      {/* 4. BOTTOM CENTERED STATEMENT */}
+      <div className="relative z-20 text-center mt-10">
         <p className="text-base md:text-lg font-bold tracking-wide text-white drop-shadow">
           To improve performances. Improve lives <br className="hidden sm:inline" /> and change the world.
         </p>
